@@ -1,0 +1,10 @@
+.pointdiv{
+  width:210px;
+  height:210px;
+  border-radius:90%;
+  background-color:red;
+  text-align: center;
+  font-size:86px;
+  padding-top:46px;
+  top:200px;
+}
