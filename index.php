@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?include('head.html')?>
+  <?php include('head.html')?>
   <title>Обучение. Пакет 1 - Базовый</title>
 </head>
 <body>
 <div id='main_index' class="container-fluid" style='font-size:38px;'>
  <button type="button" class="btn-primary w-100 p-2 mt-5" data-toggle="modal" data-target="#exampleModal" onclick="set_modal(1)">Тренажер 1. Скоростной клик мыши</button><br>
- <button type="button" class="btn-primary w-100 p-2 mt-5" data-toggle="modal" data-target="#exampleModal" onclick="set_modal(2)">Тренажер 2. Перетаскивание элементов</button>
+ <button type="button" class="btn-primary w-100 p-2 mt-5" data-toggle="modal" data-target="#exampleModal" onclick="set_modal(2)">Тренажер 2. Перетаскивание элементов</button><br>
+ <button type="button" class="btn-primary w-100 p-2 mt-5" data-toggle="modal" data-target="#exampleModal" onclick="set_modal(3)">Тренажер 3. Работа с клавиатурой</button>
 </div>
 <!-- Modal -->
 <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -30,5 +31,5 @@
   </div>
 </div>
 </body>
-<?include('scriptlib.html')?>
+<?php include('scriptlib.html')?>
 </html>

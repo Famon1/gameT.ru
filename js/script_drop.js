@@ -73,7 +73,11 @@ function set_alert_point(){
   $('#alert_lvl').text(level)
   $('#alert_point').text(point)
 
-  $('#drop_left').css('width', '50px');
+  let lvl_wd  = 600 - (level * 50)
+  if (lvl_wd < 30) lvl_wd = 30;
+
+  $('#drop_left').css('width', `${lvl_wd}px`);
+  $('#drop_right').css('width', `${lvl_wd}px`);
 
 }
 //=======================================================

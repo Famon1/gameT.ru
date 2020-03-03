@@ -47,3 +47,14 @@ body{
     height:5px;
     background: red;
 }
+/*klava-----------------------------------*/
+#div_key{
+  width:450px;
+  height:450px;
+  font-size:288px;
+  font-weight:bold;
+  color:white;
+  border-radius:50px;
+  border:1px solid gray;
+  text-align:center;
+}

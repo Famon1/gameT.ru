@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <?include('head.html')?>
+  <?php include('head.html')?>
   <title>Обучение. Перетаскивание</title>
 </head>
 <body>
@@ -28,7 +28,7 @@
 
 </div>
 </body>
-<?include('scriptlib.html')?>
+<?php include('scriptlib.html')?>
 
 <script type="text/javascript" src="js/script_drop.js"></script>
 
