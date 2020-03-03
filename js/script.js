@@ -1,62 +1,30 @@
-let max_ww = 210;
-let max_hh = 210;
-
-let settB = {
-  1: {w: 210, h: 210, t:46, f:86},
-  2: {w: 170, h: 170, t:41, f:64},
-  3: {w: 130, h: 130, t:24, f:56},
-  4: {w: 90, h: 90, t:13, f:49},
-  5: {w: 50, h: 50, t:2, f:32},
-};
-//======================================================
-function ballch(id) {
-
-  let objB = $(`#${id}`)
-  let val = (objB.attr('value') * 1) + 1;
-
-  if (val >= 5) {
-                  objB.remove()
-                  create_buble()
-                }
-   else if (val !== NaN)
-   {
-      objB.css('width',settB[val].w)
-      objB.css('height',settB[val].h)
-      objB.css('padding-top',settB[val].t)
-      objB.css('font-size',settB[val].f)
-      objB.attr('value',val)
-
-      setTimeout(function(){ballch(id)},1000)
-   }
+function gohref(src){
+  window.location.href = src
 }
-//======================================================
-function create_buble(){
+//=========================================
+function set_modal(ind){
+  let naz = $('#Mlabel')
+  let txt = $('#Mtext')
+  let butt = $('#btn_go')
 
-  let ww = $(window).width();
-  let hh = $(window).height();
-
-  let indef = 'ball' + randInt(1000,9999);
-
-  $('<div>',{id:indef,
-            class:'pointdiv',
-            value:0,
-            on: {
-              click: function(event){
-                $(this).attr('value',5)
-                $(this).remove();
-                create_buble()
-              }
-            },
-          }).appendTo('#main');
-
-    let left = randInt(1, ww - max_ww)
-    let top = randInt(1,hh - max_hh)
-    $(`#${indef}`).offset({left:left,top:top});
-
-    setTimeout(function(){ballch(indef)},0)
+  if (ind == 1){
+    naz.html('Тренажер по работе с мышью')
+    txt.html(`Ваша задача «кликать» (левая кнопка мыши) на цветные шары.<br>
+              <img src= 'img/click.png' height='350'/><br>
+              С каждым набранным очком увеличивается скорость шаров.
+              На выполнение задания дается 5 минут.
+              `)
+    butt.attr(`onclick`,`gohref('clicker.php')`)
+  }
+  else if (ind == 2){
+    naz.html('Тренажер по перетаскиванию элементов.')
+    txt.html(`Вам даны две колонки. Нужно перетащить синий блок под зеленый.
+              Чтобы перетащить блок нужно нажать ЛКМ (левой кнопкой мыши)
+              и не отпуская, перетащить в нужное место.<br>
+              <img src= 'img/drop.gif' width='450'/><br>
+              С каждым набранным очком уменьшается длина блоков.
+              На выполнение задания дается 5 минут.
+              `)
+    butt.attr(`onclick`,`gohref('drop.php')`)
+  }
 }
-//======================================================
-function randInt(min, max) {
-  return Math.floor(Math.random() * (max - min)) + min;
-}
-create_buble();

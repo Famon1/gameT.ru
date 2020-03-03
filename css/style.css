@@ -1,10 +1,49 @@
+body{
+  background: url('../img/fon1.png');
+}
 .pointdiv{
   width:210px;
   height:210px;
   border-radius:90%;
-  background-color:red;
   text-align: center;
   font-size:86px;
   padding-top:46px;
   top:200px;
+  cursor:pointer;
+}
+
+/*clicker-----------------*/
+#alert_inf{
+  font-size:22px;
+}
+/*drop-------------------*/
+.flexed{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.tasks-wrapper{
+  width: 600px;
+  height: 450px;
+  overflow: hidden;
+}
+.task{
+  box-sizing: border-box;
+  margin: 10px auto 0;
+  height: 60px;
+  width: 98%;
+  text-align: center;
+  cursor:pointer;
+}
+.over {
+    position: relative;
+}
+.over:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left:0;
+    right: 0;
+    height:5px;
+    background: red;
 }
